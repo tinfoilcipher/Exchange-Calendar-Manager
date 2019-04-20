@@ -19,7 +19,7 @@ Function Connect-365 {
 }
 
 Function Connect-OnPrem {
-	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://rmtmail.rmt.r-m-t.co.uk/PowerShell/ -Authentication Kerberos
+	$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri $exchERI -Authentication Kerberos
 	Import-PSSession $Session
 }
 
